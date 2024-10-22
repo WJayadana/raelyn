@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <!-- Tambahkan SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" readonly id="result" value="0">
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="toggleSign()">±</button>
+            <button class="btn" onclick="appendToDisplay('%')">%</button>
+            <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator" onclick="appendToDisplay('*')">*</button>
+
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+            <button class="btn zero" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+            <button class="btn operator" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('result');
+        let currentInput = '0'; // Menyimpan input saat ini
+        let operatorClicked = false; // Melacak apakah operator sudah diklik
+
+        // Fungsi untuk menambahkan angka atau simbol ke display
+        function appendToDisplay(value) {
+            if (currentInput === '0' && value !== '.') {
+                currentInput = value; // Jika input awal adalah 0, gantikan dengan nilai yang baru
+            } else {
+                currentInput += value; // Tambahkan nilai ke input yang ada
+            }
+            display.value = currentInput;
+        }
+
+        // Fungsi untuk menghitung hasil dari ekspresi
+        function calculateResult() {
+            try {
+                // Jika input adalah "16 + 27", tampilkan alert menggunakan SweetAlert
+                if (currentInput === '16+27' || currentInput === '16 + 27') {
+                    Swal.fire({
+                        title: 'Allo Raelyn',
+                        text: 'Anda telah menjumlahkan 16 + 27',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                }
+                // Jika input adalah "15 + 13", tampilkan alert dan arahkan setelah konfirmasi
+                else if (currentInput === '15+13' || currentInput === '15 + 13') {
+                    Swal.fire({
+                        title: 'Pengalihan',
+                        text: 'Anda akan diarahkan ke halaman maaf',
+                        icon: 'warning',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'https://wjayadana.github.io/raelyn/maaf';
+                        }
+                    });
+                } else {
+                    // Lanjutkan dengan perhitungan normal
+                    currentInput = eval(currentInput).toString(); // Menggunakan eval untuk menghitung ekspresi
+                    display.value = currentInput;
+                }
+            } catch (error) {
+                display.value = "Error"; // Jika terjadi kesalahan
+            }
+        }
+
+        // Fungsi untuk membersihkan display
+        function clearDisplay() {
+            currentInput = '0';
+            display.value = currentInput;
+        }
+
+        // Fungsi untuk mengubah tanda positif/negatif
+        function toggleSign() {
+            if (currentInput[0] === '-') {
+                currentInput = currentInput.slice(1); // Hilangkan tanda minus jika ada
+            } else {
+                currentInput = '-' + currentInput; // Tambahkan tanda minus jika tidak ada
+            }
+            display.value = currentInput;
+        }
+    </script>
+</body>
+
+</html>

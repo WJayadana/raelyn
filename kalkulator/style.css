@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    padding: 20px;
+    background-color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.display input {
+    width: 100%;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-align: right;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Warna operator diubah menjadi ungu */
+.operator {
+    background-color: #800080;
+}
+
+.operator:hover {
+    background-color: #9932CC;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .display input {
+        font-size: 2rem;
+    }
+}

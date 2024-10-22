@@ -93,7 +93,7 @@ function autoScroll() {
 const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 90, imageHeight: 90,});
 const swalst = Swal.mixin({timer: 2400, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageWidth: 90, imageHeight: 90,});
 const scrollInterval = setInterval(autoScroll, 50);
-async function jawab(){await swals.fire('Kirim jawabannya<br>ke WhatsApp aku, ya! 😆');window.location = "https://api.whatsapp.com/send?phone=6285162822778&text=" + pesanwhatsapp;}
+async function jawab(){await swals.fire('Inget, Kirim jawabannya<br>ke WhatsApp aku, ya! 😆');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
 
 function tombol(){Tombol.style="margin-top:0;opacity:1;transform: scale(1);";ftom=1;} ftom = 0; jumlahKlik = 0;
 function fungsibaru(btn) {
