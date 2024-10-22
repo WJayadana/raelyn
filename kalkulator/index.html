@@ -64,16 +64,36 @@
                 if (currentInput === '16+27' || currentInput === '16 + 27') {
                     Swal.fire({
                         title: 'Allo Raelyn',
-                        text: 'Anda telah menjumlahkan 16 + 27',
+                        text: 'Angka yang kamu masukin ini adalah ultah kita',
                         icon: 'success',
                         confirmButtonText: 'OK'
+                    });
+                }
+                if (currentInput === '27+16' || currentInput === '27 + 16') {
+                    Swal.fire({
+                        title: 'Allo Raelyn',
+                        text: 'Angka yang kamu masukin ini adalah ultah kita',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                }
+                if (currentInput === '13+15' || currentInput === '13 + 15') {
+                    Swal.fire({
+                        title: 'TOPO',
+                        text: 'Angkat yang kamu masukin itu adalah Neptu Kita',
+                        icon: 'warning',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'https://wjayadana.github.io/raelyn/maaf';
+                        }
                     });
                 }
                 // Jika input adalah "15 + 13", tampilkan alert dan arahkan setelah konfirmasi
                 else if (currentInput === '15+13' || currentInput === '15 + 13') {
                     Swal.fire({
-                        title: 'Pengalihan',
-                        text: 'Anda akan diarahkan ke halaman maaf',
+                        title: 'TOPO',
+                        text: 'Angkat yang kamu masukin itu adalah Neptu Kita',
                         icon: 'warning',
                         confirmButtonText: 'OK'
                     }).then((result) => {
