@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai Kamu...</title>
+    <link rel="icon" href="https://img.icons8.com/plasticine/2x/filled-like.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.gifer.com/3jni.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .welcome-screen {
+            position: relative;
+            width: 80%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 17px;
+            background: rgba(21, 20, 20, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .welcome-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 17px;
+            background: rgba(0, 0, 0, 0.429);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .welcome-button:hover {
+            transform: scale(1.1);
+        }
+
+        .main-page {
+            position: relative;
+            text-align: center;
+            background-image: url('https://i.gifer.com/3jni.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: black;
+            display: none;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            border-radius: 17px;
+            background: rgba(41, 38, 38, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .content-container h1 {
+            color: black;
+            margin: 10px 0;
+        }
+
+        .btnMau {
+            background-color: pink;
+            border: 2px solid pink;
+            padding: 10px 20px;
+            border-radius: 20px 5px 20px 5px;
+        }
+
+        .btnMau:hover {
+            box-shadow: 5px 5px red;
+            cursor: pointer;
+            margin-top: -20px;
+        }
+
+        .btnGamau {
+            background-color: red;
+            border: 2px solid red;
+            padding: 10px 20px;
+            border-radius: 20px 5px 20px 5px;
+            color: white;
+        }
+
+        .btnGamau:hover {
+            box-shadow: 5px 5px black;
+            cursor: pointer;
+            margin-top: -20px;
+        }
+
+        .gif-animation {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <div class="welcome-screen">
+            <img src="https://media.tenor.com/OU7qmzXIFBcAAAAi/bubu-dudu.gif" alt="Romantic Heart Animation"
+                class="gif-animation">
+            <h1>Halo Sengg...</h1>
+            <p>Eh, coba deh lihat tanggal hari ini. Ada yang spesial loh:</p>
+            <h2><b>23-04-2025 (2345)</b></h2>
+            <p>Kok angkanya cantik banget ya? Kayak ada sesuatu yang istimewa di baliknya...</p>
+            <p>Aku pengen ngasih kamu kejutan nih. Tapi, kamu harus klik tombol di bawah dulu buat lanjut. Penasaran
+                kan?</p>
+        </div>
+        <button class="welcome-button">Klik Ini Seng!</button>
+    </div>
+    <div id="main-page" class="main-page">
+        <div class="content-container">
+            <img src="https://media.tenor.com/YMxinLhsGRsAAAAj/be-mine-valentine-love.gif"
+                alt="Romantic Heart Animation" class="gif-animation">
+            <h1>Ternyata Ini Alasannya...</h1>
+            <p>Jadi, aku membuat ini karena ada sesuatu yang udah lama pengen ku sampaiin ke kamu.</p>
+            <p>Dari pertama kali bertemu, aku udah merasakan ada sesuatu yang berbeda. Kamu itu... entahlah, buat aku
+                kangen terus hehe.</p>
+            <p>Setiap kali kita mengobrol, aku merasa seolah-olah dunia ini hanya milik kita berdua. Ada ikatan kuat
+                yang ku rasakan di antara kita.</p>
+            <p>Setelah mikirin lama, aku yakin kalau kamu adalah orang yang tepat untukku. Kamu membuat hidupku lebih
+                berwarna.</p>
+            <p>Sebenarnya, aku pengen mengungkapkan ini tanggal 14 kemarin. tapi, setelah mempertimbangkan, aku
+                memilih cari tanggal yang angkanya cantik kaya kamu. Oleh karena itu, aku memilih tanggal
+                23-04-2025 (2345) yaitu hari ini.</p>
+            <p>Dan sekarang, saatnya untuk bertanya langsung ke kamu...</p>
+            <h1>Mau Ga Jadi Pacarku?</h1>
+            <button id="btn_mau" style="margin-left: -100px;" class="btnMau first">
+                <i class="fas fa-heart"></i> Mau
+            </button>
+            <button id="ga_mau" style="position: absolute; margin-left: 20px;" class="btnGamau">
+                <i class="fas fa-heart-broken"></i> Gamau
+            </button>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="https://raw.githubusercontent.com/WJayadana/WJayadana/refs/heads/main/jadianyuk.mp3"
+            type="audio/mp3">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    <script>
+        const music = document.getElementById('background-music');
+        function playMusic() {
+            music.play().catch(error => {
+                console.error("Audio playback failed:", error);
+                alert("Klik gif nya biar lagu nya ke play ya seng.");
+                document.body.addEventListener('click', () => music.play());
+            });
+        }
+        window.onload = playMusic;
+        function enterMainPage() {
+            const welcomeScreen = document.querySelector('.welcome-screen');
+            const welcomeButton = document.querySelector('.welcome-button');
+            const mainPage = document.getElementById('main-page');
+            welcomeScreen.style.display = 'none';
+            welcomeButton.style.display = 'none';
+            mainPage.style.display = 'block';
+        }
+        document.querySelector('.welcome-button').addEventListener('click', enterMainPage);
+        function gamau(id) {
+            var mau = document.getElementById('btn_mau');
+            var i = Math.floor(Math.random() * 300) + 1;
+            var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+            id.style.left = i + 'px';
+            id.style.top = j + 'px';
+        }
+        // Fungsi untuk tombol "Gamau"
+        // Fungsi untuk tombol "Gamau"
+        document.getElementById('ga_mau').addEventListener('click', function () {
+            swal({
+                title: "Yah beneran ditolak ya?",
+                text: "Apa kamu yakin?",
+                icon: "warning",
+                buttons: {
+                    iya: {
+                        text: "Iya",
+                        value: "iya",
+                    },
+                    becanda: {
+                        text: "Becanda 😘",
+                        value: "becanda",
+                    },
+                },
+            }).then((value) => {
+                if (value === "iya") {
+                    // Jika pengguna memilih "Iya", arahkan ke WhatsApp
+                    const phoneNumber = "6285162822778"; // Ganti dengan nomor WhatsApp Anda
+                    const message = encodeURIComponent("Maaf yaa aku tolak");
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(whatsappUrl, "_blank"); // Buka WhatsApp di tab baru
+                } else if (value === "becanda") {
+                    // Jika pengguna memilih "Becanda"
+                    swal({
+                        title: "I <3 U",
+                        text: "Hehe pilih yang bener dong!",
+                        icon: "success",
+                    });
+                }
+            });
+        });
+        // Fungsi untuk tombol "Mau"
+        document.querySelector(".first").addEventListener("click", function () {
+            swal({
+                title: "Beneran Mau?",
+                text: "Yakin kamu mau jadi pacarku?",
+                icon: "warning",
+                buttons: {
+                    iya: {
+                        text: "Iya",
+                        value: "iya",
+                    },
+                    becanda: {
+                        text: "Becanda Wle.",
+                        value: "becanda",
+                    },
+                },
+            }).then((value) => {
+                if (value === "iya") {
+                    // Jika pengguna memilih "Iya", arahkan ke WhatsApp
+                    const phoneNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
+                    const message = encodeURIComponent("Aku mau jadi pacarmu! ❤️");
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(whatsappUrl, "_blank"); // Buka WhatsApp di tab baru
+                } else if (value === "becanda") {
+                    // Jika pengguna memilih "Becanda"
+                    swal({
+                        title: "Dasar Sengg... 😠",
+                        text: "Jangan nge-prank aku dong!",
+                        icon: "info",
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
